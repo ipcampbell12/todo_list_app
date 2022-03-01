@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+  <!--  <link rel="stylesheet" href="styles.css"> -->
+     <link rel="stylesheet" href="animation.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+</head>
+
+<body class = "wrapper">
+    <h1 id = "showcase" class = "grow-big header">To Do List Application</h1>
+    <br>
+  <!--  <img src="Road.jpg" alt="This is a road" class = "picture-size green-background">  -->
+    <br>
+
+<div class="buttons">
+    <div id="add-items" class="add-items grow-small">
+    <h3 class = "under grow-big">Add Items</h3>
+    <br>  
+    <label class = "labels container top-row">Enter to do list item</label>
+   <input type="text" id = "input">
+   <br>
+   <br>
+   <div id = "dropdowns" class="margin-size-small text-color container">
+        <label >Add item to: </label>
+        <select name="list-select" id="list-type" onchange="getList()">
+            <option id = "today" name = "list-op"> To Do Today</option>
+            <option id = "tomorrow" name = "list-op"> To Do Tomorrow</option>
+            <option id = "week" name = "list-op"> To Do Next Week</option>
+        </select>
+    </div>
+    <br>  
+    <button type = "button" id = "btn1" onclick ="addItem()" class = "buttons-container fade-in">Add Item</button>
+    </div>
+
+    <div id="remove-items" class="remove-items grow-small">
+    <br>
+    <h3 class ="under grow-big">Remove Items</h3>
+    <p>Press this button to remove completed items.</p>
+    <br>
+   <!-- <div id = "dropdowns-r" class="margin-size-small text-color container">
+        <label class ="labels">Remove item from</label>
+    <select name="list-select" id="list-type-r" onchange="getList()" class = "container">
+        <option id = "today" name = "list-op-r"> To Do Today</option>
+        <option id = "tomorrow" name = "list-op-r"> To Do Tomorrow</option>
+        <option id = "week" name = "list-op-r"> To Do Next Week</option>
+    </select>
+    </div>-->
+    <button type = "button" id = "btn1" onclick ="removeItem()" class = "buttons-container fade-in"> Remove Item</button>
+    </div>
+    <br>
+</div>
+
+    <br>
+   <div id = "lists-div" class ="text-color container list-grid"> 
+     
+      <div class = "list-1 slide"> <h4 class = "under grow-big">Today Tasks</h4><ul id = "list1" name = "list-output" ></ul> </div>
+     
+      <div class = "list-2 slide"> <h4 class = "under grow-big">Tomorrow Tasks</h4><ul id = "list2" name = "list-output" > </ul> </div>
+    
+      <div class = "list-3 slide"> <h4 class = "under grow-big">Next Week Tasks</h4><ul id = "list3" name = "list-output" > </ul> </div>
+   </div> 
+
+
+    <script src = "script.js"> </script>
+</body>
+</html>
